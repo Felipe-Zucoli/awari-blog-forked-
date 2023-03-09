@@ -19,14 +19,19 @@ posts.forEach(createArticle);
 
 function createArticle(post) {
     const article = document.createElement("article");
+    article.classList.add("post");
+
     const title = document.createElement("h1");
+    title.classList.add("post-title");
     const titleText = document.createTextNode(post.title);
     title.appendChild(titleText);
     article.appendChild(title);
+
     const content = document.createElement("p");
     const contentText = document.createTextNode(post.content);
     content.appendChild(contentText);
     article.appendChild(content);
+
     wrapper.appendChild(article);
 }
 
